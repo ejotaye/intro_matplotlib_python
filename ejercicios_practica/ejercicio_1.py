@@ -35,4 +35,12 @@ if __name__ == '__main__':
 
     # Crear acá su gráfico
 
+    fig = plt.figure()
+    fig.suptitle('Line_plot', fontsize=14)
+    ax= fig.add_subplot()
+    ax.plot(x, y, c='r', marker='o', label='Lista')
+    ax.legend()
+    ax.grid()
+    plt.show()
+
     print("terminamos")

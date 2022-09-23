@@ -8,6 +8,7 @@
 # que aparecen en verde con el hashtag "#"
 
 # Ejercicios de matplotlib
+from cProfile import label
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -54,4 +55,28 @@ if __name__ == '__main__':
 
     # Crear acá su gráfico
 
+    fig = plt.figure()
+    fig.suptitle('Line vs Scatter', fontsize=15)
+    ax1 = fig.add_subplot(2, 2, 1)
+    ax2 = fig.add_subplot(2, 2, 2)
+    ax3 = fig.add_subplot(2, 2, 3)
+    ax4 = fig.add_subplot(2, 2, 4)
+
+    ax1.plot(x, y1, c='r', label='y1 = x**2')
+    ax1.grid()
+    ax1.legend()
+
+    ax2.scatter(x, y2, c='b', marker='.', label= 'y2 = x**3')
+    ax2.grid()
+    ax2.legend()
+
+    ax3.plot(x, y3, c='g', label='y3 = x**4')
+    ax3.grid()
+    ax3.legend()
+
+    ax4.scatter(x, y4, c='m', marker='.', label='y4 = np.sqrt(x)')
+    ax4.grid()
+    ax4.legend()
+    
+    plt.show  
     print("terminamos")

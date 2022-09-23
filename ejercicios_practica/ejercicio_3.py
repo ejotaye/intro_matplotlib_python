@@ -34,4 +34,12 @@ if __name__ == '__main__':
 
     # Crear acá su gráfico
 
+    fig = plt.figure()
+    fig.suptitle('SCATTER PLOT')
+    ax = fig.add_subplot()
+    ax.scatter(x, y, c='b', marker='.', label='tanh')
+    ax.legend()
+    ax.grid()
+    plt.show()
+
     print("terminamos")

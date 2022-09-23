@@ -8,6 +8,7 @@
 # que aparecen en verde con el hashtag "#"
 
 # Ejercicios de matplotlib
+
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -45,5 +46,15 @@ if __name__ == '__main__':
     # a su elección
 
     # Crear acá su gráfico
+
+    fig = plt.figure()
+    fig.suptitle('MULTI_LINE_PLOT', fontsize=15)
+    ax= fig.add_subplot()
+    ax.plot(x, y1, c='r', marker='o', label='y1')
+    ax.plot(x, y2, c='k', marker='1', label='y2')
+    ax.legend()
+    ax.grid()
+    plt.show()
+
 
     print("terminamos")
